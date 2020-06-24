@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  stock:
+    image: openjdk:11
+    command: sh -c "./gradlew bootRun" 
+    working_dir:  /stocktaking-backend
+    volumes:
+      - ./:/stocktaking-backend
+    ports: 
+      - 8080:8080
